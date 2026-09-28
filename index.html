@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="To-Do Life Dashboard - academic learning project">
+  <title>To-Do Life Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Life<span>Dashboard</span></div>
+  <div id="today" class="date"></div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">PERSONAL PRODUCTIVITY</p>
+      <h1>Atur tugasmu,<br><span>selesaikan harimu.</span></h1>
+      <p class="subtitle">Dashboard sederhana untuk mencatat tugas, memantau progres, dan menjaga aktivitas tetap teratur.</p>
+    </div>
+    <div class="progress-card">
+      <div class="progress-label"><span>Progress hari ini</span><strong id="progressText">0%</strong></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <small id="progressDetail">0 dari 0 tugas selesai</small>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><span>Total</span><strong id="total">0</strong></div>
+    <div class="stat"><span>Selesai</span><strong id="done">0</strong></div>
+    <div class="stat"><span>Belum selesai</span><strong id="remaining">0</strong></div>
+  </section>
+
+  <section class="workspace">
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Daftar Tugas</h2>
+        <button id="clearDone" class="ghost">Hapus yang selesai</button>
+      </div>
+      <form id="taskForm" class="task-form">
+        <input id="taskInput" type="text" placeholder="Contoh: Kerjakan laporan praktikum..." required>
+        <select id="priority">
+          <option value="low">Rendah</option>
+          <option value="medium" selected>Sedang</option>
+          <option value="high">Tinggi</option>
+        </select>
+        <button class="primary" type="submit">+ Tambah</button>
+      </form>
+      <div id="empty" class="empty">Belum ada tugas. Tambahkan tugas pertamamu.</div>
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+
+    <aside class="panel tips">
+      <h2>Tips Hari Ini</h2>
+      <div class="tip">🎯 Fokus satu tugas sebelum berpindah.</div>
+      <div class="tip">⏱️ Pecah tugas besar menjadi langkah kecil.</div>
+      <div class="tip">☕ Istirahat sebentar setelah menyelesaikan tugas.</div>
+    </aside>
+  </section>
+</main>
+
+<footer>Academic / Learning Project • HTML • CSS • JavaScript</footer>
+<script src="script.js"></script>
+</body>
+</html>
